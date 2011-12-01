@@ -1,0 +1,11 @@
+body {
+	margin:0;
+	padding:0;
+  font-family: 'Poller One';
+	background: #547990;
+	background-image: url("../img/image1.jpeg"), url("../img/image2.jpeg");
+	background-repeat: repeat-x, repeat;
+}
+
+.wf-active h1 {font-family: 'Poller One', serif; font-size: 36pt;}
+.wf-inactive h1 {font-family: serif; font-size: 36pt;}

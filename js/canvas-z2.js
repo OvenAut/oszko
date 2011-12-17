@@ -4,14 +4,20 @@
 //  Created by Oliver Oszko on 2011-11-29.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
-var canvas2 = document.createElement('canvas');
-var ctx2 = canvas2.getContext('2d');
-document.body.appendChild(canvas2);
-canvas2.style.position= "absolute";
-canvas2.style.zIndex = 1;
-canvas2.id = "fg";
-canvas2.width = document.documentElement.clientWidth;//400;
-canvas2.height = getDocHeight();//document.documentElement.clientHeight;//400;
+var ctx2,canvas2;
+function initVars2() {
+	// body...
+	canvas2 = document.getElementById('cv2');
+	ctx2 = canvas2.getContext('2d');
+	//document.body.appendChild(canvas2);
+	//canvas2.style.position= "absolute";
+	canvas2.style.zIndex = 1;
+	//canvas2.id = "fg";
+	canvas2.width = document.documentElement.clientWidth;//400;
+	canvas2.height = getDocHeight();//document.documentElement.clientHeight;//400;
+
+
+};
 
 draw2 = function() {
 	//ctx2.font="54pt 'Poller One'";

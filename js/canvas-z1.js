@@ -1,18 +1,26 @@
+var canvas,ctx;
 
 
+function initVars() {
+	// body...
+//	canvas = document.getElementById("cv");
 
-var canvas = document.createElement('canvas');
-var ctx = canvas.getContext('2d');
-document.body.appendChild(canvas);
+canvas = document.getElementById('cv1');
+ctx = canvas.getContext("2d");
+
+//ctx = canvas.getContext('2d');
+//document.body.appendChild(canvas);
 //canvas.style = "position: absolute; z-index: 0";
-canvas.style.position ="absolute";
+//canvas.style.position ="absolute";
 canvas.style.zIndex = 0;
-canvas.id = "bg";
+//canvas.id = "bg";
 canvas.width = document.documentElement.clientWidth;//400;
 canvas.height = getDocHeight();//document.documentElement.clientHeight;//400;
-
+};
 		
 var changText = true;
+
+
 
 var Ptcl = function(){};
 Ptcl.pt = Ptcl.prototype;
@@ -299,11 +307,19 @@ function loopDelegate() {
 	loop()
 	};
 
-(addPtcls(30),
-	function animloop(){
-      requestAnimFrame(animloop);
-      loopDelegate();
-})();
+
+ $(document).ready(function() {
+   // do stuff when DOM is ready
+	initVars();
+	initVars2();
+	(addPtcls(30),
+		function animloop(){
+	      requestAnimFrame(animloop);
+	      loopDelegate();
+	})();
+
+ });
+
 
 //var timer = setInterval(loopDelegate, 1000 / 60);
 //var p = new Ptcl();
